@@ -86,7 +86,7 @@ int get_size(const char *format, int *i);
 
 /* Functions to print sting in reverse */
 int print_reverse(va_list types, char buffer[],
-		int flags, int width,int precision, int size);
+		int flags, int width, int precision, int size);
 
 /* Functions to print a string in rot 13*/
 int print_rot13string(va_list types, char buffer[],
