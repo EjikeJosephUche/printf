@@ -20,7 +20,7 @@ int print_unsigned(va_list types, char buffer[],
 	int i = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
 
-	num = convert_size_unsgnd(num, size);
+	long int num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[i--] = '0';
@@ -71,7 +71,7 @@ int print_octal(va_list types, char buffer[],
 		num /= 8;
 	}
 
-	if (flags & F_HASH && init_num != 0)
+	if (flags & F_HASH && int_num != 0)
 		buffer[i--] = '0';
 
 	i++;
